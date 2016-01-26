@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class MainController {
     @RequestMapping(method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
+    public String printIndex(ModelMap model) {
         return "index";
     }
 }
