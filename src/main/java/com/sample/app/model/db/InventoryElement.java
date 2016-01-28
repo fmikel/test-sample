@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "InventoryElement", indexes = {
+@Table(name = "inventory_element", indexes = {
         @Index(columnList = "code", name = "code_idx")
 })
 public class InventoryElement implements Serializable {

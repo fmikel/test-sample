@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MainController {
     @RequestMapping(method = RequestMethod.GET)
     public String redirectToHomePage(ModelMap model) {
-        return "allInventoryElements";
+        return "redirect:./allInventoryElements";
     }
 }
