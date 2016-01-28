@@ -1,15 +1,13 @@
 package com.sample.app.model.db;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "InventoryElement")
+@Table(name = "InventoryElement", indexes = {
+        @Index(columnList = "code", name = "code_idx")
+})
 public class InventoryElement implements Serializable {
     @Id
     @GeneratedValue

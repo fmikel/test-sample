@@ -20,7 +20,7 @@ public class InventoryElementServiceImpl implements InventoryElementService {
     @Autowired
     InventoryElementDAO inventoryElementDAO;
 
-    public List<InventoryElement> loadInventoryElements(InputStream inputStream) throws IOException {
+    public List<InventoryElement> loadInventoryElements(InputStream inputStream) throws Exception {
         List<InventoryElement> inventoryElements = inventoryElementConverter.convert(inputStream);
         if (inventoryElements != null && !inventoryElements.isEmpty()) {
             addAll(inventoryElements);

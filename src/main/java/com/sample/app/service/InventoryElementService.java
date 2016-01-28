@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.List;
 
 public interface InventoryElementService {
-    List<InventoryElement> loadInventoryElements(InputStream inputStream) throws IOException;
+    List<InventoryElement> loadInventoryElements(InputStream inputStream) throws Exception;
 
     void add(InventoryElement inventoryElement);
 

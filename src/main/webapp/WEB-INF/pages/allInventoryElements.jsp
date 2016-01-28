@@ -21,7 +21,7 @@
             <td>${inventoryElement.code}</td>
             <td>${inventoryElement.name}</td>
             <td>${inventoryElement.cost}</td>
-            <td><fmt:formatDate value="${inventoryElement.date}" pattern="MM/dd/yyyy"/></td>
+            <td><fmt:formatDate value="${inventoryElement.date}" pattern="dd/MM/yyyy hh:mm:ss"/></td>
             <td><a href="./editInventoryElement?id=${inventoryElement.id}">Edit</a> | <a href="./deleteInventoryElement?id=${inventoryElement.id}">Delete</a></td>
         </tr>
     </c:forEach>
@@ -29,6 +29,9 @@
         <td colspan="5">
             <a href="./addInventoryElement">Add Inventory Element</a>
         </td>
+    </tr>
+    <tr>
+        <td><a href="./upload">Upload File</a></td>
     </tr>
 </table>
 </body>

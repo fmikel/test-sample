@@ -23,7 +23,7 @@ public class InventoryElementConverter implements Converter<InventoryElement, In
     @Autowired
     InventoryElementDAO inventoryElementDAO;
 
-    public List<InventoryElement> convert(InputStream stream) throws IOException {
+    public List<InventoryElement> convert(InputStream stream) throws Exception {
         ArrayList<InventoryElement> result = new ArrayList<>();
 
         HSSFWorkbook wb = null;

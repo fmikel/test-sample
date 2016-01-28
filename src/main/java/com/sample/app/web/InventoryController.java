@@ -15,14 +15,12 @@ import java.util.Date;
 
 @Controller
 public class InventoryController {
-    private static final Logger logger = Logger.getLogger(InventoryController.class);
-
     @Autowired
     InventoryElementService inventoryElementService;
 
     @InitBinder
     public void initBinder(WebDataBinder webDataBinder) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
         dateFormat.setLenient(false);
         webDataBinder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
     }

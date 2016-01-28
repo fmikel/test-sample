@@ -33,7 +33,7 @@ public class InventoryElementDAOImpl implements InventoryElementDAO {
     @Override
     public void save(InventoryElement inventoryElement) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(inventoryElement);
+        session.saveOrUpdate(inventoryElement);
     }
 
     @Override

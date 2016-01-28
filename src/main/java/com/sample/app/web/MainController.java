@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class MainController {
     @RequestMapping(method = RequestMethod.GET)
-    public String printIndex(ModelMap model) {
-        return "index";
+    public String redirectToHomePage(ModelMap model) {
+        return "allInventoryElements";
     }
 }
